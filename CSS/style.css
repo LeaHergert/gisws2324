@@ -87,10 +87,11 @@ section {
   background-color: #242d3f;
   padding: 3%;
   margin: 5%;
-  border-radius: 40px;
-  border: thin solid white;
+  /* border-radius: 40px; */
+  border-bottom: thin solid white;
   box-shadow: 5px 8px 9px #ffffff80;
   height: max-content;
+  border-top: thin solid white;
 }
   
 .parallax {
@@ -103,12 +104,11 @@ section {
 /* Sub Pages */
 #about {
     display: table;
-    width: max-content;
+    width: 100vw;
     /* align-items: initial; */
     align-content: center;
     margin-left: auto;
     margin-right: auto;
-    min-width: 50vw;
 }
 #about h2 {
   display: table-header-group;
