@@ -14,29 +14,43 @@
   font-family: "lato";
   src: url("../Fonts/Lato-Regular.ttf");
 }
+/* html, body{
+  overflow-y: auto;
+} */
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    padding-bottom: 5vh;
     overflow-x: hidden;
-    height: 162vh;
+    height: 200vh;
     color: white;
+    display: flex;
+    flex-direction: column;
   }
   
 
   header {
+    color: #fff;
+    text-align: center;
+    height: 200vh;
+    width: 100vw;
+    position: absolute;
+  }
+  .bgimage{
     background-image: url(../Images/parallax.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    height: 110%;
+    height: 200vh;
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    opacity: 0.8;
+    z-index: -3;
   }
   h1,
   h2,
@@ -84,9 +98,9 @@ nav a {
 /* Main */
 main {
   width: 100vw;
-  position: absolute;
-  top: 35vh;
-  height: 130%;
+  position: relative;
+  margin-top: 35vh;
+  
   display: grid;
 }
 
@@ -168,6 +182,10 @@ section {
 }
 
 /* Image Wheel */
+.wheelcontainer{
+  height: 95vh;
+  width: 100vw;
+}
 .wheel {
     width: 300px;
     height: 200px;
@@ -175,7 +193,7 @@ section {
   
     position: absolute;
     left: 50%;
-    top: 83%;
+    top: 65%;
     transform: translate(-50%, -50%);
   }
   img.wheel {
@@ -217,12 +235,11 @@ section {
 /* Footer */
 footer{
     background-color: #242d3f;
-    position: absolute;
+    position: relative;
+    margin-top: auto;
     width: 90vw;
     padding: 1% 5%;
     display: flex;
-    /* flex-wrap: wrap; */
-    /* align-content: space-between; */
     justify-content: space-between;
 }
 
