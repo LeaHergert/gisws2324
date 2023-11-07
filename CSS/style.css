@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "quicksand";
-  src: url("/Fonts/Quicksand-VariableFont_wght.ttf");
+  src: url("../Fonts/Quicksand-VariableFont_wght.ttf");
 }
 
 body {
@@ -77,7 +77,7 @@ nav a {
 main {
   width: 100vw;
   position: absolute;
-  top: 23vh;
+  top: 35vh;
   height: 130%;
   display: grid;
 }
