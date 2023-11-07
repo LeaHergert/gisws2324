@@ -6,6 +6,14 @@
   font-family: "quicksand";
   src: url("../Fonts/Quicksand-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "yellowtail";
+  src: url("../Fonts/Yellowtail-Regular.ttf");
+}
+@font-face {
+  font-family: "lato";
+  src: url("../Fonts/Lato-Regular.ttf");
+}
 
 body {
     font-family: Arial, sans-serif;
