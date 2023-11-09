@@ -16,50 +16,56 @@ window.addEventListener("load", (event) => {
     }
   });
 
-  // Get a reference to the header element
-  var header = document.querySelector("header");
+  function updateHeaderHeight() {
+    // Get a reference to the header element
+    var header = document.querySelector("header");
 
-  // Get the desired height (e.g., the client height of the body)
-  var bodyHeight = document.body.clientHeight;
+    // Get the desired height (e.g., the client height of the body)
+    var bodyHeight = document.body.clientHeight;
 
-  // Set the height of the header using CSS
-  header.style.height = bodyHeight + "px";
+    // Set the height of the header using CSS
+    header.style.height = bodyHeight + "px";
+  }
+  // Initial update on page load
+  updateHeaderHeight();
 
+  // Update on window resize
+  window.addEventListener("resize", updateHeaderHeight);
 
-    // Define some variables for rotating cards in a wheel-like arrangement
-    let theta = Math.PI / 3.0;
-    let new_theta = 0.0;
-    let new_x = 0.0;
-    let new_y = 0.0;
-    let wheel_radius = 230.0;
-    let wheel_theta = 0.0;
-    
-    // Select all elements with the class "card" and the element with class "wheel"
-    const cards = document.querySelectorAll(".card");
-    const wheel = document.querySelector(".wheel");
-    
-    // Define the center point for arranging cards
-    const center = {
-      x: parseFloat(getComputedStyle(cards[0]).left),
-      y: parseFloat(getComputedStyle(cards[0]).top),
-    };
-  
-    // Loop through each card and position it in a circular pattern
-    cards.forEach((card, index) => {
-      new_theta = theta * index;
-      new_x = Math.cos(new_theta) * wheel_radius;
-      new_y = -1.0 * Math.sin(new_theta) * wheel_radius;
-  
-      card.style.left = `${center.x + new_x}px`;
-      card.style.top = `${center.y + new_y}px`;
-    });
-  
-    // Add a wheel rotation effect in response to the mouse wheel event
-    document.addEventListener("wheel", (event) => {
-      let scroll_speed = event.deltaY * 0.002;
-      wheel_theta = wheel_theta + scroll_speed;
-      wheel.style.transform = `translate(-50%, -50%) rotate(${
-        wheel_theta * (180 / Math.PI)
-      }deg)`;
-    });
+  // Define some variables for rotating cards in a wheel-like arrangement
+  let theta = Math.PI / 3.0;
+  let new_theta = 0.0;
+  let new_x = 0.0;
+  let new_y = 0.0;
+  let wheel_radius = 230.0;
+  let wheel_theta = 0.0;
+
+  // Select all elements with the class "card" and the element with class "wheel"
+  const cards = document.querySelectorAll(".card");
+  const wheel = document.querySelector(".wheel");
+
+  // Define the center point for arranging cards
+  const center = {
+    x: parseFloat(getComputedStyle(cards[0]).left),
+    y: parseFloat(getComputedStyle(cards[0]).top),
+  };
+
+  // Loop through each card and position it in a circular pattern
+  cards.forEach((card, index) => {
+    new_theta = theta * index;
+    new_x = Math.cos(new_theta) * wheel_radius;
+    new_y = -1.0 * Math.sin(new_theta) * wheel_radius;
+
+    card.style.left = `${center.x + new_x}px`;
+    card.style.top = `${center.y + new_y}px`;
+  });
+
+  // Add a wheel rotation effect in response to the mouse wheel event
+  document.addEventListener("wheel", (event) => {
+    let scroll_speed = event.deltaY * 0.002;
+    wheel_theta = wheel_theta + scroll_speed;
+    wheel.style.transform = `translate(-50%, -50%) rotate(${
+      wheel_theta * (180 / Math.PI)
+    }deg)`;
+  });
 });
