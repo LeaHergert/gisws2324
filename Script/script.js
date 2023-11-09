@@ -25,8 +25,7 @@ window.addEventListener("load", (event) => {
   // Set the height of the header using CSS
   header.style.height = bodyHeight + "px";
 
-  // Check if the current page URL contains the string 'index'
-  if (document.location.href.indexOf('index') > -1){ 
+
     // Define some variables for rotating cards in a wheel-like arrangement
     let theta = Math.PI / 3.0;
     let new_theta = 0.0;
@@ -63,5 +62,4 @@ window.addEventListener("load", (event) => {
         wheel_theta * (180 / Math.PI)
       }deg)`;
     });
-  }
 });
