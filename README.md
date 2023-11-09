@@ -8,7 +8,6 @@ Welcome to the GitHub repository for the "Lea und ihre Babys" website. This repo
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
