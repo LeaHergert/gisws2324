@@ -28,7 +28,7 @@ To get a copy of this project up and running on your local machine, follow these
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/LeaHergert/lea-und-ihre-babys.git
+   git clone https://github.com/LeaHergert/gisws2324
    ## Usage
 
 Open the `index.html` file in your web browser.
