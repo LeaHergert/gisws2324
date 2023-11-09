@@ -133,7 +133,7 @@ section {
 #about, #wip {
   display: table;
   width: 100%;
-  border-spacing: 20vw 5vh;
+  border-spacing: 15vw 5vh;
   table-layout: fixed;
 }
 
@@ -217,7 +217,7 @@ img.wheel {
   height: 180px;
   object-fit: cover;
   transition-duration: 0.4s;
-  border: 8px solid transparent;
+  box-shadow: 5px 8px 20px 20px transparent;
 }
 
 .card {
@@ -230,11 +230,12 @@ img.wheel {
   transform: translate(-50%, -50%);
   object-fit: cover;
   transition-duration: 0.4s;
+  box-shadow: 5px 8px 20px 20px transparent;
 }
 
 /* Hover Styles for Cards and Image Wheel */
 .card:hover, img.wheel:hover {
-  border: 8px solid var(--shadow);
+  box-shadow: 5px 8px 20px 20px var(--shadow);
   transition-duration: 0.4s;
 }
 
