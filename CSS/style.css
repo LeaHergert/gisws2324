@@ -24,6 +24,7 @@
   src: url("../Fonts/Exo-VariableFont_wght.ttf");
 }
 
+
 /* Root Variables */
 :root {
   --blue: #242d3f99;
@@ -39,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: black;
+  overflow-x: hidden;
 }
 
 header {
@@ -283,4 +285,44 @@ footer span {
 
 footer .fa-solid, footer .fa-brands {
   display: flex;
+}
+
+@media (max-width: 1190px) {
+  #about, #wip {
+    border-spacing: 5vw 5vh;
+  }
+  nav ul {
+    font-size: 2.5em;
+  }
+  .wheelcontainer {
+    height: 65vh;  
+  }
+  main {
+    gap: 6vh;  
+  }
+}
+
+@media (max-width: 800px) {
+  .wheelcontainer {
+    height: 90vh;  
+  }
+}
+/* Your existing styles for larger screens */
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+
+
+  .wheel {
+    width: 100%; /* Make the wheel take full width */
+  }
+
+  .card {
+    width: 100%; /* Make the cards take full width */
+    transition: transform 0.4s; /* Add a transition effect */
+  }
+
+  .card:hover {
+    transform: scale(1.1); /* Scale up on hover for the cool transition */
+  }
 }

@@ -26,12 +26,13 @@ window.addEventListener("load", (event) => {
     // Set the height of the header using CSS
     header.style.height = bodyHeight + "px";
   }
+
   // Initial update on page load
   updateHeaderHeight();
 
   // Update on window resize
   window.addEventListener("resize", updateHeaderHeight);
-
+  
   // Define some variables for rotating cards in a wheel-like arrangement
   let theta = Math.PI / 3.0;
   let new_theta = 0.0;
